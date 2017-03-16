@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap-app",
+  "version": "0.0.0",
+  "description": "bootsrap SimpleApp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "rudra",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-tsc": "^1.3.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "tsd": "^0.6.5",
+    "typescript": "^2.0.10"
+  }
+}

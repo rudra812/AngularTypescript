@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>My App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div ng-controller="mainController">
+        <h1 ng-bind="globalScreenName"></h1>
+        <h3 ng-bind="SearchedValue" id="serachedValue" ng-click="events.changeName($event);"></h3>        
+    </div>   
+
+    <script src="bower_components/jQuery/dist/jquery.min.js"></script> 
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="dist/app.js"></script>  
+</body>
+</html>
