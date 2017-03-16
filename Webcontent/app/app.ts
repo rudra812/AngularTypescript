@@ -1,25 +1,26 @@
 ///<reference path="../typings/tsd.d.ts"/>
-let appModule = angular.module("myApp",['ui.router']);
-appModule.controller("mainController",($scope,$rootScope)=>{
-    new Application.controllers.mainController($scope,$rootScope);
-});
-namespace Application.controllers{
-    export interface IControllerScope  extends ng.IScope {
-        SearchedValue: string;                  
+class Configuration{
+    static $inject = ['$stateProvider', '$urlRouterProvider'];
+    constructor(private $stateProvider:ng.ui.IStateProvider, private $urlRouterProvider:ng.ui.IUrlRouterProvider){
+        this.init();
     }
-    export class mainController{       
-        name:string;
-        scope:any;
-        static $inject = ["$scope","$rootScope"];
-        constructor($scope:IControllerScope,$rootScope:ng.IRootScopeService) {                       
-           this.scope = $scope;
-           $rootScope.globalScreenName = "My Angualr App"
-           this.scope.SearchedValue = "Rudra";
-           this.scope.events  = this;         
-        }
-        changeName(event:BaseJQueryEventObject){
-            console.log(jQuery(event.currentTarget).attr('id'));
-            this.scope.SearchedValue = "Pupu";
+    private init(){
+         this.$urlRouterProvider.otherwise('/');
+         this.$stateProvider.state("/",Configuration.defaultState());
+        
+    }
+    private static defaultState():ng.ui.IState{
+         return {
+            url: "/",
+            template: "<h1>hello</h1>",
+            controller:""
         }
     }
 }
+
+
+
+let appModule = angular.module("myApp",['ui.router'])
+.config(($stateProvider, $urlRouterProvider)=>{
+    return new Configuration($stateProvider, $urlRouterProvider);
+});
