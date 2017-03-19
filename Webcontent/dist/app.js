@@ -12,10 +12,7 @@ var Configuration = (function () {
     Configuration.defaultState = function () {
         return {
             url: "/",
-            template: ['<div>',
-                '<h1 ng-bind="globalScreenName"></h1>',
-                '<h3 ng-bind="SearchedValue" id="serachedValue" ng-click="events.changeName($event);"></h3>',
-                '</div>'].join(""),
+            templateUrl: './app/partials/home.html',
             controller: "mainController"
         };
     };

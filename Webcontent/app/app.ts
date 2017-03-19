@@ -1,4 +1,5 @@
 ///<reference path="../typings/index.d.ts"/>
+
 class Configuration{
     static $inject = ['$stateProvider', '$urlRouterProvider'];
     constructor(private $stateProvider:ng.ui.IStateProvider, private $urlRouterProvider:ng.ui.IUrlRouterProvider){
@@ -11,16 +12,12 @@ class Configuration{
     }
     private static defaultState():ng.ui.IState{
          return {
-            url: "/",
-            template: ['<div>',
-                        '<h1 ng-bind="globalScreenName"></h1>',
-                        '<h3 ng-bind="SearchedValue" id="serachedValue" ng-click="events.changeName($event);"></h3>',        
-                    '</div>'].join("") ,
+            url: "/",           
+            templateUrl:'./app/partials/home.html',
             controller:"mainController"
         }
     }
 }
-
 
 
 let appModule = angular.module("myApp",['ui.router'])
