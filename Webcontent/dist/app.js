@@ -1,4 +1,4 @@
-///<reference path="../typings/tsd.d.ts"/>
+///<reference path="../typings/index.d.ts"/>
 var Configuration = (function () {
     function Configuration($stateProvider, $urlRouterProvider) {
         this.$stateProvider = $stateProvider;

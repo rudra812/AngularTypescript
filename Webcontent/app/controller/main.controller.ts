@@ -1,4 +1,4 @@
-///<reference path="../../typings/tsd.d.ts"/>
+///<reference path="../../typings/index.d.ts"/>
 appModule.controller("mainController",($scope,$rootScope)=>{
     new Application.controllers.mainController($scope,$rootScope);
 });

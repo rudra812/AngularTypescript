@@ -1,0 +1,10 @@
+{
+  "name": "bootstrap-app",
+  "dependencies": {
+    "angular": "registry:dt/angular#1.6.0+20170310065540",
+    "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20161222093745"
+  },
+  "globalDependencies": {
+    "node": "registry:env/node#6.0.0+20161019193037"
+  }
+}
